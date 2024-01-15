@@ -1,0 +1,187 @@
+:root {
+    --card-background-color: #212121;
+    --card-background-text: #000;
+    --card-header-name-color: #444;
+    --card-header-brand-color: #999;
+    --card-header-description-color: #333;
+    --card-header-price-color: #a2a2a2;
+}
+
+.watch-card-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    margin: 20px;
+}
+
+.watch-card-edit-btn, .watch-card-delete-btn {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 34px;
+    color: var(--main-icon-color);
+    background: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.watch-card {
+    position: relative;
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    width: 600px;
+    height: 300px;
+    background: #fff;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.watch-card-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    background: var(--card-background-color);
+    transition: .3s linear;
+    overflow: hidden;
+}
+
+.watch-card-image:before {
+    content: 'Watch';
+    position: absolute;
+    top: 0px;
+    left: 14px;
+    color: var(--card-background-text);
+    opacity: 0.2;
+    font-size: 5em;
+    font-weight: 800;
+}
+
+.watch-card-image img {
+    position: relative;
+    width: 400px;
+    transform: rotate(-30deg);
+    /* left: -50px; */
+    transition: .9s linear;
+}
+
+.watch-card-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.watch-card-details-info-name {
+    margin: 0;
+    padding: 0;
+    font-size: 1.6em;
+    line-height: 1em;
+    color: var(--card-header-name-color);
+}
+
+.watch-card-details-info-brand span {
+    font-size: 0.6em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--card-header-brand-color);
+}
+
+.watch-card-details-info-description {
+    max-width: 85%;
+    margin-left: 15%;
+    color: var(--card-header-description-color);
+    font-size: 12px;
+    margin-bottom: 28px;    /* 36px */
+    height: 25px;
+    /* text-overflow: hidden;  */
+    overflow: hidden; 
+    /* white-space: nowrap; */
+}
+
+.watch-card-details-info-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.watch-card-details-info-price {
+    margin: 0;
+    padding: 0;
+    font-size: 1.5em;
+    color: var(--card-header-price-color);
+    float: left;
+}
+
+.watch-card-details-info-cart {
+    background: #000;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 12px 17px;
+    margin-top: 5px;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 40px;
+    float: right;
+    margin-left: 7px;
+}
+
+.watch-card-details-info-cart:hover {
+    transform: translateY(-2.5px);
+}
+
+/* Responsiveness */
+@media (max-width: 1080px) {
+    .watch-card {
+        height: auto;
+    }
+
+    .watch-card-image {
+        padding: 40px;
+        box-sizing: border-box;
+        width: 100% !important;
+        height: auto;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    .watch-card-image img {
+        left: initial;
+        max-width: 100%;
+        transform: rotate(0deg);
+    }
+
+    .watch-card-details {
+        width: 100% !important;
+        height: auto;
+        padding: 20px;
+    }
+    .watch-card-details-info-description {
+        margin-left: 0;
+        max-width: 100%;
+    }
+}
+
+.status-message {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--main-success-button-color);
+    padding: 7px;
+}
+  
+.success {
+    color: var(--main-success-button-color);
+}
